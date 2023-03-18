@@ -1,6 +1,7 @@
 import 'personas.dart';
+import '45_Mixing.dart';
 
-class Usuarios extends Persona {
+class Usuarios extends Persona with Profesion {
   String? nombreUsuario;
   String? contrasena;
 
