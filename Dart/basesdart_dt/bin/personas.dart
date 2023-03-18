@@ -23,4 +23,8 @@ class Persona {
   set setDireccion(Direccion? direccion) => this.direccion = direccion;
 
   Persona(this._nombre, {this.edad, this.telefono, this.direccion});
+
+  String hablar(String texto) {
+    return '$_nombre habla y dice $texto';
+  }
 }
