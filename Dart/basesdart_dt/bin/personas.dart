@@ -1,10 +1,10 @@
 import 'direccion.dart';
 
-class Persona {
+class Persona<T extends Direccion> {
   String? _nombre;
   int? edad;
   String? telefono;
-  Direccion? direccion;
+  T? direccion;
 
   String? get nombre => this._nombre;
 
@@ -20,11 +20,15 @@ class Persona {
 
   Direccion? get getDireccion => this.direccion;
 
-  set setDireccion(Direccion? direccion) => this.direccion = direccion;
+  set setDireccion(T? direccion) => this.direccion = direccion;
 
   Persona(this._nombre, {this.edad, this.telefono, this.direccion});
 
   String hablar(String texto) {
     return '$_nombre habla y dice $texto';
+  }
+
+  T getDireccion2() {
+    return direccion!;
   }
 }

@@ -1,5 +1,6 @@
 import '45_Mixing.dart';
 import '46_Extensiones.dart';
+import 'alimento.dart';
 import 'direccion.dart';
 import 'personas.dart';
 import 'trabajador.dart';
@@ -46,4 +47,21 @@ void main(List<String> arguments) {
 
   print(
       'El salario de ${pedro.nombre} en dólares es: ${pedro.convertirADolares(pedro.salario!).toStringAsFixed(2)}');
+
+  // Static
+  // Los métodos static se usan desde una Extensión y no es necesario crear una instancia de un objeto para usarlo
+
+  double conversion = TrabajadorExtension.obtenerValorCambio();
+  print(
+      'La conversión de euros a dólares se hace al multiplicar por: ${TrabajadorExtension.obtenerValorCambio()}');
+
+  // Genéricos
+
+  Alimento tomates = Alimento('Tomate', 1.0);
+  Alimento champinon = Alimento('Champiñón', 3.0);
+
+  List<Alimento> listaCompra = [tomates, champinon];
+  listaCompra.add(Alimento('Peras', 1.20));
+
+  print(listaCompra);
 }
