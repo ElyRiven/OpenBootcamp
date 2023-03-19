@@ -1,5 +1,6 @@
 import '45_Mixing.dart';
 import '46_Extensiones.dart';
+import '48_Genéricos2.dart';
 import 'alimento.dart';
 import 'direccion.dart';
 import 'personas.dart';
